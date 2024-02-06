@@ -1,0 +1,77 @@
+.main-section {
+  color: $color-black-dark;
+  margin-top: 5rem; // For large screens
+
+  .main-section-header {
+    text-align: center;
+    color: $color-blue-light;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    span {
+      text-transform: uppercase;
+    }
+    margin-bottom: 2.5rem;
+  }
+
+  .main-section-content {
+    margin-bottom: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    gap: 10rem;
+    align-items: center;
+
+    &-heading {
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 100%; /* 48px */
+      margin-bottom: 2rem;
+    }
+    &-paragraph {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 20px */
+      max-width: 552px;
+    }
+  }
+}
+.section-sub-content {
+  background-color: $color-blue-light;
+  color: $color-white-classic;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+
+  &-paragraph {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%; /* 32px */
+    margin-bottom: 2rem;
+  }
+
+  &-icons-links {
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+    align-items: center;
+
+    & a {
+      transition: 0.2s;
+    }
+
+    & a:hover {
+      opacity: 0.5;
+    }
+
+    svg {
+      @include respond(tab-port) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

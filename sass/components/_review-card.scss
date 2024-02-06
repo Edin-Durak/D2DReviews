@@ -1,0 +1,92 @@
+// Styling review cards for header
+
+.review-card {
+  border-radius: 10px;
+  border: 1px solid $color-black-classic;
+  background: $color-white-classic;
+  text-align: center;
+  padding: 16px 8px;
+  width: 182px;
+  height: 237px;
+  flex-shrink: 0;
+  position: absolute;
+  transition: transform 0.3s ease, z-index 0.3s ease, outline 0.3s ease;
+
+  // @include max-width;
+  @include respond(tab-land) {
+    position: relative;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-title {
+    color: $color-black-classic;
+    font-family: Alegreya;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    padding: 5px auto;
+  }
+
+  .card-review-text {
+    color: $color-gray-light;
+    text-align: center;
+    font-family: Alegreya;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128%; /* 14.08px */
+  }
+}
+
+.review-card-one {
+  z-index: 1;
+  top: -20rem;
+  right: 20rem;
+
+  // @include max-width;
+  @include respond(tab-land) {
+    top: auto;
+    right: auto;
+  }
+}
+.review-card-two {
+  z-index: 2;
+  top: calc(-20rem + 40px);
+  right: calc(20rem - 160px);
+  .card-logo {
+    height: 45px;
+    margin-top: -1rem;
+  }
+
+  // @include max-width;
+  @include respond(tab-land) {
+    top: auto;
+    right: auto;
+  }
+}
+.review-card-three {
+  z-index: 3;
+  top: calc(-20rem + 137px +40px);
+  right: calc(20rem - 80px);
+
+  // @include max-width;
+  @include respond(tab-land) {
+    top: auto;
+    right: auto;
+  }
+}
+
+// Review card on hover
+.review-card:hover {
+  z-index: 999;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(49, 128, 242, 0.2);
+
+  @include respond(tab-land) {
+    transform: scale(1.1);
+  }
+}

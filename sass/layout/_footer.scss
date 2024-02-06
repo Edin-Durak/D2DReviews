@@ -1,0 +1,52 @@
+.footer {
+  background-color: $color-black-dark;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @include respond(phone) {
+    .logo-img {
+      width: 45px;
+    }
+  }
+
+  &-logo a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    p {
+      align-self: center;
+    }
+  }
+
+  a {
+    color: $color-white-classic;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 28px */
+    transition: 0.1s ease all;
+
+    @include respond(phone) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $color-blue-light;
+    }
+  }
+
+  .USA-logo-link {
+    align-self: center;
+    margin-top: 8px;
+  }
+  .USA-flag {
+    width: 30px;
+    height: 26px;
+    margin-top: -1rem;
+  }
+}
